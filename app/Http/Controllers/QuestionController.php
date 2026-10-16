@@ -29,11 +29,16 @@ class QuestionController extends Controller
     {
         //dd($request->all());
 
-        $data['nama'] = $request->nama;
-        $data['email'] = $request->email;
-        $data['pertanyaan'] = $request->pertanyaan;
+        $request->validate([
+            'nama' => 'required|min:5',
+            'email' => ['required', 'email'],
+            'pertanyaan' => 'required|max:300|min:10',
+        ], [
+            'nama.min' => 'Nama tidak boleh kosong',
+            'email.email' => 'Email Tidak valid'
+        ]);
 
-        return view('home-question-response', $data);
+        return view('home-question-response', $request);
     }
 
     /**
