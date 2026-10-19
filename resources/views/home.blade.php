@@ -183,7 +183,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                                <textarea class="form-control" rows="4" name="pertanyaan" rows="{{old('pertanyaanQ')}}"></textarea>
+                                <textarea class="form-control" id="pertanyaan" rows="4" name="pertanyaan">{{ old('pertanyaan') }}</textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
                         </form>
