@@ -28,8 +28,15 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets-admin/img/favicon/apple-touch-icon.png') }}">
+<<<<<<< HEAD
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets-admin/img/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets-admin/img/favicon/favicon-16x16.png') }}">
+=======
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('assets-admin/img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('assets-admin/img/favicon/favicon-16x16.png') }}">
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
     <link rel="manifest" href="{{ asset('assets-admin/img/favicon/site.webmanifest') }}">
     <link rel="mask-icon" href="{{ asset('assets-admin/img/favicon/safari-pinned-tab.svg') }}" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -114,7 +121,11 @@
                 </li>
                 <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active ">
+<<<<<<< HEAD
                     <a href="" class="nav-link">
+=======
+                    <a href="{{ route('pelanggan.index') }}" class="nav-link">
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -180,8 +191,13 @@
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </span>
+<<<<<<< HEAD
                                 <input type="text" class="form-control" id="topbarInputIconLeft" placeholder="Search"
                                     aria-label="Search" aria-describedby="topbar-addon">
+=======
+                                <input type="text" class="form-control" id="topbarInputIconLeft"
+                                    placeholder="Search" aria-label="Search" aria-describedby="topbar-addon">
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                             </div>
                         </form>
                         <!-- / Search form -->
@@ -190,8 +206,13 @@
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark notification-bell unread dropdown-toggle"
+<<<<<<< HEAD
                                 data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown"
                                 data-bs-display="static" aria-expanded="false">
+=======
+                                data-unread-notifications="true" href="#" role="button"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                                 <svg class="icon icon-sm text-gray-900" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -351,13 +372,18 @@
                     <p class="mb-0">List data seluruh pelanggan</p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <a href="/pelanggan/create" class="btn btn-success text-white"><i
                             class="far fa-question-circle me-1"></i>
+=======
+                    <a href="" class="btn btn-success text-white"><i class="far fa-question-circle me-1"></i>
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                         Tambah Pelanggan</a>
                 </div>
             </div>
         </div>
 
+<<<<<<< HEAD
 
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -367,6 +393,8 @@
         @endif
 
 
+=======
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
         <div class="row">
             <div class="col-12 mb-4">
                 <div class="card border-0 shadow mb-4">
@@ -387,6 +415,7 @@
                                 <tbody>
                                     @foreach ($dataPelanggan as $item)
                                         <tr>
+<<<<<<< HEAD
                                             <td>{{ $item->first_name }}</td>
                                             <td>{{ $item->last_name }}</td>
                                             <td>{{ $item->birthday }}</td>
@@ -426,6 +455,25 @@
                                                 </form>
 
                                             </td>
+=======
+                                            <td>{{ $item->firstname }}</td>
+                                            <td>{{ $item->last_name }}</td>
+                                            <td>{{ $item->birhday }}</td>
+                                            <td>{{ $item->gender }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->phone }}</td>
+                                            <td>
+                                                <a href="" class="btn btn-info btn-sm">
+                                                    <svg class="icon icon-xs me-2" data-slot="icon" fill="none"
+                                                        stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10">
+                                                        </path>
+                                                    </svg>
+                                                    Edit
+                                                </a></td>
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -440,8 +488,13 @@
             <div class="row">
                 <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
                     <p class="mb-0 text-center text-lg-start">© 2019-<span class="current-year"></span> <a
+<<<<<<< HEAD
                             class="text-primary fw-normal" href="https://themesberg.com" target="_blank">Themesberg</a>
                     </p>
+=======
+                            class="text-primary fw-normal" href="https://themesberg.com"
+                            target="_blank">Themesberg</a></p>
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
                 </div>
                 <div class="col-12 col-md-8 col-xl-6 text-center text-lg-start">
                     <!-- List -->
@@ -472,4 +525,8 @@
     <script src="{{ asset('assets-admin/js/volt.js') }}"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ebc6b28a0ec7430eccde3612dec33267faa8e386
