@@ -115,7 +115,6 @@
                     </a>
                 </li>
 
-                <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active ">
                     <a href="{{ route('pelanggan.index') }}" class="nav-link">
                         <span class="sidebar-icon">
@@ -130,7 +129,6 @@
                         <span class="sidebar-text">Pelanggan</span>
                     </a>
                 </li>
-
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
                 <li class="nav-item">
                     <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
@@ -378,7 +376,7 @@
                                     <!-- Last Name -->
                                     <div class="mb-3">
                                         <label for="last_name" class="form-label">Last name</label>
-                                        <input type="text" id="last_name" class="form-control" name="last_name"
+                                        <input type="text" id="last_name" class="form-control" name = "last_name"
                                             required>
                                     </div>
                                 </div>
@@ -387,7 +385,7 @@
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
-                                        <input type="date" id="birthday" class="form-control" name="birthday">
+                                        <input type="date" id="birthday" class="form-control">
                                     </div>
 
                                     <!-- Gender -->
@@ -406,14 +404,15 @@
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" id="email" class="form-control" name="email"
+                                        <input type="text" id="email" class="form-control" name="email"
                                             required>
                                     </div>
 
                                     <!-- Phone -->
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
-                                        <input type="text" id="phone" class="form-control" name="phone">
+                                        <input type="text" id="phone" class="form-control" name="phone"
+                                            required>
                                     </div>
 
                                     <!-- Buttons -->
