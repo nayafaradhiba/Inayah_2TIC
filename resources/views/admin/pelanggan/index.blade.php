@@ -21,10 +21,8 @@ The above copyright notice and this permission notice shall be included in all c
     <meta name="author" content="Themesberg">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets-admin/img/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('assets-admin/img/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('assets-admin/img/favicon/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets-admin/img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets-admin/img/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets-admin/img/favicon/site.webmanifest') }}">
     <link rel="mask-icon" href="{{ asset('assets-admin/img/favicon/safari-pinned-tab.svg') }}" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -106,7 +104,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </li>
                 <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active ">
-                    <a href="{{ route('pelanggan.index') }}" class="nav-link">
+                    <a href="" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -169,8 +167,8 @@ The above copyright notice and this permission notice shall be included in all c
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </span>
-                                <input type="text" class="form-control" id="topbarInputIconLeft"
-                                    placeholder="Search" aria-label="Search" aria-describedby="topbar-addon">
+                                <input type="text" class="form-control" id="topbarInputIconLeft" placeholder="Search"
+                                    aria-label="Search" aria-describedby="topbar-addon">
                             </div>
                         </form>
                         <!-- / Search form -->
@@ -179,8 +177,8 @@ The above copyright notice and this permission notice shall be included in all c
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark notification-bell unread dropdown-toggle"
-                                data-unread-notifications="true" href="#" role="button"
-                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false">
                                 <svg class="icon icon-sm text-gray-900" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -339,7 +337,11 @@ The above copyright notice and this permission notice shall be included in all c
                     <p class="mb-0">List data seluruh pelanggan</p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <a href="{{ route('pelanggan.index') }}" class="btn btn-success text-white"><i
+=======
+                    <a href="/pelanggan/create" class="btn btn-success text-white"><i
+>>>>>>> 860dea5e929be1d8a0ee972e8e65e9bb6bf68877
                             class="far fa-question-circle me-1"></i>
                         Tambah Pelanggan</a>
                 </div>
@@ -358,6 +360,15 @@ The above copyright notice and this permission notice shall be included in all c
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+
+
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
 
         <div class="row">
             <div class="col-12 mb-4">
@@ -379,12 +390,13 @@ The above copyright notice and this permission notice shall be included in all c
                                 <tbody>
                                     @foreach ($dataPelanggan as $item)
                                         <tr>
-                                            <td>{{ $item->firstname }}</td>
+                                            <td>{{ $item->first_name }}</td>
                                             <td>{{ $item->last_name }}</td>
-                                            <td>{{ $item->birhday }}</td>
+                                            <td>{{ $item->birthday }}</td>
                                             <td>{{ $item->gender }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->phone }}</td>
+<<<<<<< HEAD
                                             <td>
                                             <td>
                                                 <!-- Tombol Edit -->
@@ -396,11 +408,23 @@ The above copyright notice and this permission notice shall be included in all c
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2"
                                                             d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+=======
+                                            <td><a href="{{ route('pelanggan.edit', $item->pelanggan_id) }}"
+                                                    class="btn btn-info btn-sm">
+                                                    <svg class="icon icon-xs me-2" data-slot="icon" fill="none"
+                                                        stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0
+                                                                 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5
+                                                                 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3
+                                                                 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10">
+>>>>>>> 860dea5e929be1d8a0ee972e8e65e9bb6bf68877
                                                         </path>
                                                     </svg>
                                                     Edit
                                                 </a>
 
+<<<<<<< HEAD
                                                 <!-- Tombol Hapus -->
                                                 <form
                                                     action="{{ route('pelanggan.destroy', $item->id ?? $item->pelanggan_id) }}"
@@ -415,12 +439,30 @@ The above copyright notice and this permission notice shall be included in all c
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="2"
                                                                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+=======
+
+                                                <form action="{{ route('pelanggan.destroy', $item->pelanggan_id) }}"
+                                                    method="POST" style="display:inline">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                        <svg class="icon icon-xs me-2" data-slot="icon" fill="none"
+                                                            stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0">
+>>>>>>> 860dea5e929be1d8a0ee972e8e65e9bb6bf68877
                                                             </path>
                                                         </svg>
                                                         Hapus
                                                     </button>
                                                 </form>
+<<<<<<< HEAD
                                             </td>
+=======
+
+>>>>>>> 860dea5e929be1d8a0ee972e8e65e9bb6bf68877
                                             </td>
                                         </tr>
                                     @endforeach
@@ -435,8 +477,8 @@ The above copyright notice and this permission notice shall be included in all c
             <div class="row">
                 <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
                     <p class="mb-0 text-center text-lg-start">© 2019-<span class="current-year"></span> <a
-                            class="text-primary fw-normal" href="https://themesberg.com"
-                            target="_blank">Themesberg</a></p>
+                            class="text-primary fw-normal" href="https://themesberg.com" target="_blank">Themesberg</a>
+                    </p>
                 </div>
                 <div class="col-12 col-md-8 col-xl-6 text-center text-lg-start">
                     <!-- List -->
